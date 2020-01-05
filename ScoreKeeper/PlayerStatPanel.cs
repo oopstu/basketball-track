@@ -14,7 +14,7 @@ namespace ScoreKeeper
     public partial class PlayerStatPanel : UserControl
     {
 
-        PlayerStat myStat;
+        PlayerGameStat myStat;
         private DateTime inStart;
 
         public PlayerStatPanel()
@@ -22,12 +22,15 @@ namespace ScoreKeeper
             InitializeComponent();
         }
 
-        public PlayerStatPanel(PlayerStat bindingContext)
+        public PlayerStatPanel(PlayerGameStat bindingContext)
         {
-            myStat = bindingContext;
             InitializeComponent();
-            lblNumber.Text = "" + myStat.PlayerNumber;
-            lblName.Text = myStat.Name;
+
+            myStat = bindingContext;
+            lblName.Text = bindingContext.Player.Name;
+            lblNumber.Text = ""+ bindingContext.Player.Number;
+    
+          
         }
 
         bool kidIn = false;
@@ -38,12 +41,14 @@ namespace ScoreKeeper
             {
                 inStart = DateTime.Now;
                 btnIn.Text = "Out";
+                btnIn.BackColor = Color.LightGreen;
             }
             else {
                 double minutes = (DateTime.Now - inStart).TotalMinutes;
                 myStat.PlayedMinutes += (int)minutes;
                 lblMin.Text = "" + myStat.PlayedMinutes;
                 btnIn.Text = "In";
+                btnIn.BackColor = Color.Pink;
             }
             kidIn = !kidIn;
         }

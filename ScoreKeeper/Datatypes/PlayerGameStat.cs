@@ -8,11 +8,22 @@ using System.Threading.Tasks;
 namespace ScoreKeeper.Datatypes
 {
     [DataContract]
-    public class PlayerStat
+    public class PlayerGameStat
     {
+        public int PlayerGameStatId { get; set; }
 
+        [DataMember]
+        public Team Team
+        {
+            get; set;
+        }
 
-     
+        [DataMember]
+        public TeamPlayer Player { get; set; }
+
+        [DataMember]
+        public Game Game { get; set; }
+
         [DataMember]
         public int PlayedMinutes { get; set; }
 
@@ -48,7 +59,7 @@ namespace ScoreKeeper.Datatypes
 
         [DataMember]
         public int ThreeMissed { get; set; }
-        
+
         [DataMember]
         public int ThreeMade { get; set; }
 
@@ -64,8 +75,38 @@ namespace ScoreKeeper.Datatypes
         [DataMember]
         public int PlayerNumber { get; set; }
 
-        [DataMember]
-        public string PlayerName { get; set; }
+        public PlayerGameStat()
+        {
 
+        }
+
+        // Summary Stuff
+        public string GetInsideSummary()
+        {
+
+            return GetSummaryString(InsideShotsMade, InsideShotsMissed);
+        }
+
+        private string GetSummaryString(int shotsMade, int shotsMissed)
+        {
+            int total = shotsMade + shotsMissed;
+            decimal perc = 0;
+            if (total > 0)
+            {
+                perc = 100 * ((decimal)shotsMade / (decimal)total);
+            }
+            return $"{shotsMade}-{total} ({perc.ToString("F1")}%)";
+        }
+
+        public string GetFieldGoalSummary()
+        {
+
+            return GetSummaryString(FGMade, FGMissed);
+
+        }
+        public string GetFoulSummary()
+        {
+            return GetSummaryString(MadeFoulShots, MissedFoulShots);
+        }
     }
 }

@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+      <title>${Player.Number} - ${Player.Name} Game Report</title>
+      <style>
+         .title {
+         color:black;
+         background: gold;
+         font-size: larger;
+         font-weight: bold;
+         font-family: Roboto;
+         width: 100%;
+         height: 45px;
+         vertical-align: middle;
+         display: block;
+         border-bottom: 1px solid black;
+         border-top: 1px solid black;
+         }
+         .gamehead-cont {
+         background: gray;
+         width: 100%;
+         padding-top: 8px;
+         padding-bottom: 8px;
+         }
+         .gamehead {
+         color: black;
+         background: #F0FFF0;
+         font-size: larger;
+         font-weight: bold;
+         font-family: Roboto;
+         width: calc(100% - 16px);
+         display: block;
+         margin-left: 6px;
+         border: 1px solid black;
+         box-shadow: 5px 5px 2px grey;
+         margin-top: 6px;
+         margin-bottom: 6px;
+         padding-bottom: 25px;
+         }
+         .pName {
+         padding-left: 20px;
+         padding-top: 13px;
+         float: left;
+         font-family: Roboto;
+         }
+         .rDate {
+         padding-right: 20px;
+         padding-top: 13px;
+         float: right;
+         font-family: Roboto;
+         }
+         .sectiontitle {
+         color: black;
+         font-weight: bold;
+         font-family: Roboto;
+         font-size: larger;
+         padding-left: 10px;
+         padding-top: 25px;      
+         margin-bottom: 15px;
+         }
+         .datatable {
+         display: flex;
+         width: calc(100%-20px);
+         align: center;
+         }
+         .teamdatatable {
+         width: calc(100% - 20px);
+         align: center;
+         }
+         .teamdatatable td{
+         text-align: center;
+         font-family: Roboto;
+         }
+         .teamdatatable th {
+         text-align: center;
+         background: #082D60;
+         font-family: Roboto;
+         color: white;
+         font-weight: bolder;
+         }
+         .dttext {
+         flex: 1;
+         }
+         .dtlabels {
+         text-align: right;
+         font-family: Roboto;
+         //background: orange;
+         padding-right: 5px;
+         }
+         .dtvalues {
+         text-align: left;
+         font-family: Roboto;
+         //background: cyan;
+         padding-left: 5px;
+         }
+         .break {
+         height: 10px;
+         background-color: black;
+         display: block;
+         }
+         .statsection {
+         align: center;
+         border-bottom: 1px solid black;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Player Name Header -->      
+      <div class="title">
+         <img height="45" style="float: left;" alt="My Image" src="data:image/png;base64,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"/>
+         <span class="pName">${Player.Number} - ${Player.Name}</span>
+         <span class="rDate">${GameData.GetGameDate()}</span>
+      </div>
+      <div class="gamehead-cont">
+         <div class="gamehead">
+            <div class="sectiontitle"><span>Game Data</span></div>
+            <div style="display: flex;">
+               <div style="flex: 1; text-align: center; justify-content: center; align-items: center;">
+                  Outcome: ${GameData.Outcome}<br/>
+                  Score: $!{GameData.FinalScore}<br/>
+                  Opponent: $!{GameData.OpposingTeamNameOrId}<br/>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="break">&nbsp;</div>
+      <!-- Player Stats -->
+      <div class="gamehead-cont">
+         <div class="gamehead">
+            <div class="sectiontitle"><span>Player Stats - Game</span></div>
+            <div class="datatable">
+               <div class="dttext dtlabels">
+                  Played Minutes:<br/>
+                  Inside Shots:<br/>
+                  Field Goals:</br>
+                  Assists:<br/>
+                  Foul Shots:<br/>
+               </div>
+               <div class="dttext dtvalues">
+                  0 (Coming Soon)<br/>
+                  ${PlayerStats.GetInsideSummary()}<br/>
+                  ${PlayerStats.GetFieldGoalSummary()}<br/>
+                  ${PlayerStats.Assists}<br/>
+                  ${PlayerStats.GetFoulSummary()}<br/>
+               </div>
+               <div class="dttext dtlabels">
+                  Rebounds:<br/>
+                  Blocks:<br/>
+                  Steals: <br/>
+                  Turn Overs: <br/>
+                  Fouls:
+
+               </div>
+               <div class="dttext dtvalues">
+                  ${PlayerStats.Rebounds}<br/>
+                  ${PlayerStats.Blocks}<br/>
+                  ${PlayerStats.Steals}<br/>
+                  ${PlayerStats.CommittedTurnOvers}<br/>
+                  ${PlayerStats.CommittFoul}
+               </div>
+            </div>
+            <div class="sectiontitle"><span>Player Stats - Season</span></div>
+            <div class="datatable">
+               <div class="dttext dtlabels">
+                  Played Minutes:<br/>
+                  Inside Shots:<br/>
+                  Field Goals:</br>
+                  Assists:<br/>
+                  Foul Shots:<br/>
+               </div>
+               <div class="dttext dtvalues">
+                  0 (Coming Soon)<br/>
+                  ${SeasonStats.GetInsideSummary()}<br/>
+                  ${SeasonStats.GetFieldGoalSummary()}<br/>
+                  ${SeasonStats.Assists}<br/>
+                  ${SeasonStats.GetFoulSummary()}<br/>
+               </div>
+               <div class="dttext dtlabels">
+                  Rebounds:<br/>
+                  Blocks:<br/>
+                  Steals: <br/>
+                  Turn Overs: <br/>
+                  Fouls:
+
+               </div>
+               <div class="dttext dtvalues">
+                  ${SeasonStats.Rebounds}<br/>
+                  ${SeasonStats.Blocks}<br/>
+                  ${SeasonStats.Steals}<br/>
+                  ${SeasonStats.CommittedTurnOvers}<br/>
+                  ${SeasonStats.CommittFoul}
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="break">&nbsp;</div>
+      <!-- End Player Stats -->
+      <div class="gamehead-cont">
+         <div class="gamehead">
+            <div class="sectiontitle"><span>Team Data</span></div>
+            <div style="align: center;">
+               <table class="teamdatatable">
+                  <tr>
+                     <th>Player #</th>
+                     <th>Name</th>
+                     <th>Inside Shots</th>
+                     <th>Field Goals</th>
+                     <th>Foul Shots</th>
+                     <th>Rebounds</th>
+                     <th>Assists</th>
+                     <th>Blocks</th>
+                     <th>Steals</th>
+                     <th>Turn Overs</th>
+                     <th>Fouls</th>
+                  </tr>
+                  #foreach ($eachPlayer in $AllPlayers)
+                  <tr>
+                     <td>${eachPlayer.Player.Number}</td>
+                     <td>${eachPlayer.Player.Name}</td>
+                     <td>${eachPlayer.GetInsideSummary()}</td>
+                     <td>${eachPlayer.GetFieldGoalSummary()}</td>
+                     <td>${eachPlayer.GetFoulSummary()}</td>
+                     <td>${eachPlayer.Rebounds}</td>
+                     <td>${eachPlayer.Assists}</td>
+                     <td>${eachPlayer.Blocks}</td>
+                     <td>${eachPlayer.Steals}</td>
+                     <td>${eachPlayer.CommittedTurnOvers}</td>
+                     <td>${eachPlayer.CommittFoul}</td>
+                  </tr>
+                  #end
+               </table>
+            </div>
+         </div>
+      </div>
+      <!-- Begin Team Stats -->
+      <!-- End Team Stats -->
+      <div class="break">&nbsp;</div>
+   </body>
+</html>
