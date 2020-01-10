@@ -1,4 +1,4 @@
-﻿using Intro;
+﻿using ScoreKeeperData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using ScoreKeeper.Datatypes;
@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace ScoreKeeper
 {
@@ -20,6 +21,11 @@ namespace ScoreKeeper
         [STAThread]
         static void Main()
         {
+            // RelationalDatabaseCreator databaseCreator = 
+            //     (RelationalDatabaseCreator) new GamekeeperDB().Database.GetService<IDatabaseCreator>();
+            
+            // databaseCreator.CreateTables();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StatTrackForm());

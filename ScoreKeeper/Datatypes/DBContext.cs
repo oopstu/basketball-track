@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using ScoreKeeper.Datatypes;
 using System.Collections.Generic;
 
-namespace Intro
+namespace ScoreKeeperData
 {
     public class GamekeeperDB : DbContext
     {
-        public GamekeeperDB()
+        public GamekeeperDB() : base()
         {
+          //  Database.SetInitializer(new DropCreateDatabaseAlways < CodeFirstContext > ());  
 
         }
 

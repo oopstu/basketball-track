@@ -1,4 +1,4 @@
-﻿using Intro;
+﻿using ScoreKeeperData;
 using ScoreKeeper.Datatypes;
 using System;
 using System.Collections.Generic;
@@ -31,6 +31,25 @@ namespace ScoreKeeper
         {
             SelectedTeam = comboBox1.SelectedItem as Team;
             DialogResult = DialogResult.OK;
+        }
+
+        private void btnNewTeam_Click(object sender, EventArgs e)
+        {
+            TeamEditorForm tef = new TeamEditorForm();
+            tef.SetTeam(new Team());
+            tef.ShowDialog();
+        }
+
+        private void onChangeEnableEdit(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = (comboBox1.SelectedItem != null);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            TeamEditorForm tef = new TeamEditorForm();
+            tef.SetTeam((Team)comboBox1.SelectedItem);
+            tef.ShowDialog();
         }
     }
 }
