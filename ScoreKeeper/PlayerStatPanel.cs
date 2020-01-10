@@ -15,7 +15,15 @@ namespace ScoreKeeper
     {
 
         PlayerGameStat myStat;
-      
+        public int order { get; set; }
+
+        public PlayerGameStat GetStat() {
+
+            myStat.PlayedMinutes = (int)(secondsPlayed / 60);
+            return myStat; 
+        
+        }
+
         public PlayerStatPanel()
         {
             InitializeComponent();
@@ -28,6 +36,8 @@ namespace ScoreKeeper
             myStat = bindingContext;
             lblName.Text = bindingContext.Player.Name;
             lblNumber.Text = ""+ bindingContext.Player.Number;
+
+            order = bindingContext.PlayerNumber;
 
             t.Interval = 1000;
             t.Tick += T_Tick;
@@ -44,29 +54,29 @@ namespace ScoreKeeper
 
         private void ResetButtonColors()
         {
-            Color good = Color.LightSkyBlue;
-            Color bad = Color.PaleVioletRed;
+            Color good = Color.DarkBlue;
+            Color bad = Color.Magenta;
             if (cbCorrect.Checked) {
                 good = Color.OrangeRed;
-                bad = Color.DarkMagenta;
+                bad = Color.Red;
             }
 
-            btnBlock.BackColor = good;
-            btn3Made.BackColor = good;
-            btnFGMade.BackColor = good;
-            btnInsideMade.BackColor = good;
-            btnAssist.BackColor = good;
-            btnBlock.BackColor = good;
-            btnRebound.BackColor = good;
-            btnFoulShotMade.BackColor = good;
-            btnSteals.BackColor = good;
+            btnBlock.ForeColor = good;
+            btn3Made.ForeColor = good;
+            btnFGMade.ForeColor = good;
+            btnInsideMade.ForeColor = good;
+            btnAssist.ForeColor = good;
+            btnBlock.ForeColor = good;
+            btnRebound.ForeColor = good;
+            btnFoulShotMade.ForeColor = good;
+            btnSteals.ForeColor = good;
 
-            btnCommitFoul.BackColor = bad;
-            btnCommitTurnOver.BackColor = bad;
-            btn3Miss.BackColor = bad;
-            btnFGMiss.BackColor = bad;
-            btnInsideMiss.BackColor = bad;
-            btnFoulShotMiss.BackColor = bad;
+            btnCommitFoul.ForeColor = bad;
+            btnCommitTurnOver.ForeColor = bad;
+            btn3Miss.ForeColor = bad;
+            btnFGMiss.ForeColor = bad;
+            btnInsideMiss.ForeColor = bad;
+            btnFoulShotMiss.ForeColor = bad;
 
         }
 
@@ -132,7 +142,7 @@ namespace ScoreKeeper
             {
                 myStat.InsideShotsMade++;
             }
-            lblInsideStat.Text = myStat.InsideShotsMade + "-" + myStat.InsideShotsMissed;
+            lblInsideStat.Text = myStat.GetInsideSummary();
 
         }
 
@@ -146,7 +156,7 @@ namespace ScoreKeeper
             {
                 myStat.InsideShotsMissed++;
             }
-            lblInsideStat.Text = myStat.InsideShotsMade + "-" + myStat.InsideShotsMissed;
+            lblInsideStat.Text = myStat.GetInsideSummary();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -164,7 +174,12 @@ namespace ScoreKeeper
             {
                 myStat.FGMade++;
             }
-            lblFieldStat.Text = myStat.FGMade + "-" + myStat.FGMissed;
+            lblFieldStat.Text = myStat.GetFieldGoalSummary();
+        }
+
+        internal bool IsIn()
+        {
+            return t.Enabled;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -177,7 +192,7 @@ namespace ScoreKeeper
             {
                 myStat.FGMissed++;
             }
-            lblFieldStat.Text = myStat.FGMade + "-" + myStat.FGMissed;
+            lblFieldStat.Text = myStat.GetFieldGoalSummary();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -203,7 +218,7 @@ namespace ScoreKeeper
             {
                 myStat.ThreeMissed++;
             }
-            
+            lbl3PtStat.Text = myStat.GetThreePtSummary();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -283,11 +298,17 @@ namespace ScoreKeeper
             {
                 myStat.Blocks++;
             }
+            lblBlockStat.Text = "" + myStat.Blocks;
         }
 
         private void cbCorrect_CheckedChanged(object sender, EventArgs e)
         {
             ResetButtonColors();
+        }
+
+        private void lblMin_Click(object sender, EventArgs e)
+        {
+            btnIn_Click(sender, e);
         }
     }
 }

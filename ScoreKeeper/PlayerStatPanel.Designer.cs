@@ -58,6 +58,8 @@
             this.btnBlock = new System.Windows.Forms.Button();
             this.lblBlockStat = new System.Windows.Forms.Label();
             this.lbl3PtStat = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
@@ -104,13 +106,16 @@
             this.lblMin.Size = new System.Drawing.Size(62, 37);
             this.lblMin.TabIndex = 4;
             this.lblMin.Text = "0:0";
+            this.lblMin.Click += new System.EventHandler(this.lblMin_Click);
             // 
             // btnFoulShotMade
             // 
-            this.btnFoulShotMade.Location = new System.Drawing.Point(192, 46);
+            this.btnFoulShotMade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFoulShotMade.AutoSize = true;
+            this.btnFoulShotMade.Location = new System.Drawing.Point(6, 31);
             this.btnFoulShotMade.Margin = new System.Windows.Forms.Padding(6);
             this.btnFoulShotMade.Name = "btnFoulShotMade";
-            this.btnFoulShotMade.Size = new System.Drawing.Size(150, 60);
+            this.btnFoulShotMade.Size = new System.Drawing.Size(149, 80);
             this.btnFoulShotMade.TabIndex = 5;
             this.btnFoulShotMade.Text = "Foul Made";
             this.btnFoulShotMade.UseVisualStyleBackColor = true;
@@ -118,10 +123,12 @@
             // 
             // btnFoulShotMiss
             // 
-            this.btnFoulShotMiss.Location = new System.Drawing.Point(192, 115);
+            this.btnFoulShotMiss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFoulShotMiss.AutoSize = true;
+            this.btnFoulShotMiss.Location = new System.Drawing.Point(6, 129);
             this.btnFoulShotMiss.Margin = new System.Windows.Forms.Padding(6);
             this.btnFoulShotMiss.Name = "btnFoulShotMiss";
-            this.btnFoulShotMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnFoulShotMiss.Size = new System.Drawing.Size(149, 50);
             this.btnFoulShotMiss.TabIndex = 6;
             this.btnFoulShotMiss.Text = "Missed";
             this.btnFoulShotMiss.UseVisualStyleBackColor = true;
@@ -129,10 +136,12 @@
             // 
             // btnInsideMiss
             // 
-            this.btnInsideMiss.Location = new System.Drawing.Point(354, 115);
+            this.btnInsideMiss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsideMiss.AutoSize = true;
+            this.btnInsideMiss.Location = new System.Drawing.Point(167, 129);
             this.btnInsideMiss.Margin = new System.Windows.Forms.Padding(6);
             this.btnInsideMiss.Name = "btnInsideMiss";
-            this.btnInsideMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnInsideMiss.Size = new System.Drawing.Size(149, 50);
             this.btnInsideMiss.TabIndex = 9;
             this.btnInsideMiss.Text = "Missed";
             this.btnInsideMiss.UseVisualStyleBackColor = true;
@@ -140,10 +149,12 @@
             // 
             // btnInsideMade
             // 
-            this.btnInsideMade.Location = new System.Drawing.Point(354, 46);
+            this.btnInsideMade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsideMade.AutoSize = true;
+            this.btnInsideMade.Location = new System.Drawing.Point(167, 31);
             this.btnInsideMade.Margin = new System.Windows.Forms.Padding(6);
             this.btnInsideMade.Name = "btnInsideMade";
-            this.btnInsideMade.Size = new System.Drawing.Size(150, 60);
+            this.btnInsideMade.Size = new System.Drawing.Size(149, 80);
             this.btnInsideMade.TabIndex = 8;
             this.btnInsideMade.Text = "In Paint Made";
             this.btnInsideMade.UseVisualStyleBackColor = true;
@@ -151,10 +162,12 @@
             // 
             // btnFGMiss
             // 
-            this.btnFGMiss.Location = new System.Drawing.Point(514, 115);
+            this.btnFGMiss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFGMiss.AutoSize = true;
+            this.btnFGMiss.Location = new System.Drawing.Point(328, 129);
             this.btnFGMiss.Margin = new System.Windows.Forms.Padding(6);
             this.btnFGMiss.Name = "btnFGMiss";
-            this.btnFGMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnFGMiss.Size = new System.Drawing.Size(149, 50);
             this.btnFGMiss.TabIndex = 12;
             this.btnFGMiss.Text = "Missed";
             this.btnFGMiss.UseVisualStyleBackColor = true;
@@ -162,10 +175,12 @@
             // 
             // btnFGMade
             // 
-            this.btnFGMade.Location = new System.Drawing.Point(514, 46);
+            this.btnFGMade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFGMade.AutoSize = true;
+            this.btnFGMade.Location = new System.Drawing.Point(328, 31);
             this.btnFGMade.Margin = new System.Windows.Forms.Padding(6);
             this.btnFGMade.Name = "btnFGMade";
-            this.btnFGMade.Size = new System.Drawing.Size(150, 60);
+            this.btnFGMade.Size = new System.Drawing.Size(149, 80);
             this.btnFGMade.TabIndex = 11;
             this.btnFGMade.Text = "FG Made";
             this.btnFGMade.UseVisualStyleBackColor = true;
@@ -173,10 +188,12 @@
             // 
             // btn3Miss
             // 
-            this.btn3Miss.Location = new System.Drawing.Point(676, 115);
+            this.btn3Miss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn3Miss.AutoSize = true;
+            this.btn3Miss.Location = new System.Drawing.Point(489, 129);
             this.btn3Miss.Margin = new System.Windows.Forms.Padding(6);
             this.btn3Miss.Name = "btn3Miss";
-            this.btn3Miss.Size = new System.Drawing.Size(150, 50);
+            this.btn3Miss.Size = new System.Drawing.Size(151, 50);
             this.btn3Miss.TabIndex = 15;
             this.btn3Miss.Text = "Missed";
             this.btn3Miss.UseVisualStyleBackColor = true;
@@ -184,10 +201,12 @@
             // 
             // btn3Made
             // 
-            this.btn3Made.Location = new System.Drawing.Point(676, 46);
+            this.btn3Made.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn3Made.AutoSize = true;
+            this.btn3Made.Location = new System.Drawing.Point(489, 31);
             this.btn3Made.Margin = new System.Windows.Forms.Padding(6);
             this.btn3Made.Name = "btn3Made";
-            this.btn3Made.Size = new System.Drawing.Size(150, 60);
+            this.btn3Made.Size = new System.Drawing.Size(151, 80);
             this.btn3Made.TabIndex = 14;
             this.btn3Made.Text = "3pt Made";
             this.btn3Made.UseVisualStyleBackColor = true;
@@ -205,10 +224,10 @@
             // 
             // btnRebound
             // 
-            this.btnRebound.Location = new System.Drawing.Point(1191, 82);
+            this.btnRebound.Location = new System.Drawing.Point(1191, 100);
             this.btnRebound.Margin = new System.Windows.Forms.Padding(6);
             this.btnRebound.Name = "btnRebound";
-            this.btnRebound.Size = new System.Drawing.Size(150, 44);
+            this.btnRebound.Size = new System.Drawing.Size(150, 76);
             this.btnRebound.TabIndex = 18;
             this.btnRebound.Text = "Rebound";
             this.btnRebound.UseVisualStyleBackColor = true;
@@ -216,10 +235,10 @@
             // 
             // btnSteals
             // 
-            this.btnSteals.Location = new System.Drawing.Point(1025, 82);
+            this.btnSteals.Location = new System.Drawing.Point(1025, 100);
             this.btnSteals.Margin = new System.Windows.Forms.Padding(6);
             this.btnSteals.Name = "btnSteals";
-            this.btnSteals.Size = new System.Drawing.Size(150, 44);
+            this.btnSteals.Size = new System.Drawing.Size(150, 76);
             this.btnSteals.TabIndex = 17;
             this.btnSteals.Text = "Steal";
             this.btnSteals.UseVisualStyleBackColor = true;
@@ -227,10 +246,10 @@
             // 
             // btnCommitTurnOver
             // 
-            this.btnCommitTurnOver.Location = new System.Drawing.Point(1553, 80);
+            this.btnCommitTurnOver.Location = new System.Drawing.Point(1553, 100);
             this.btnCommitTurnOver.Margin = new System.Windows.Forms.Padding(6);
             this.btnCommitTurnOver.Name = "btnCommitTurnOver";
-            this.btnCommitTurnOver.Size = new System.Drawing.Size(222, 44);
+            this.btnCommitTurnOver.Size = new System.Drawing.Size(222, 76);
             this.btnCommitTurnOver.TabIndex = 20;
             this.btnCommitTurnOver.Text = "Commit Turnover";
             this.btnCommitTurnOver.UseVisualStyleBackColor = true;
@@ -238,10 +257,10 @@
             // 
             // btnAssist
             // 
-            this.btnAssist.Location = new System.Drawing.Point(838, 71);
+            this.btnAssist.Location = new System.Drawing.Point(838, 100);
             this.btnAssist.Margin = new System.Windows.Forms.Padding(6);
             this.btnAssist.Name = "btnAssist";
-            this.btnAssist.Size = new System.Drawing.Size(150, 44);
+            this.btnAssist.Size = new System.Drawing.Size(150, 76);
             this.btnAssist.TabIndex = 21;
             this.btnAssist.Text = "Assist";
             this.btnAssist.UseVisualStyleBackColor = true;
@@ -250,27 +269,31 @@
             // lblInsideStat
             // 
             this.lblInsideStat.AutoSize = true;
-            this.lblInsideStat.Location = new System.Drawing.Point(378, 16);
+            this.lblInsideStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblInsideStat.Location = new System.Drawing.Point(167, 0);
             this.lblInsideStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblInsideStat.Name = "lblInsideStat";
-            this.lblInsideStat.Size = new System.Drawing.Size(94, 25);
+            this.lblInsideStat.Size = new System.Drawing.Size(149, 25);
             this.lblInsideStat.TabIndex = 23;
             this.lblInsideStat.Text = "0-0 (0%)";
+            this.lblInsideStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFieldStat
             // 
             this.lblFieldStat.AutoSize = true;
-            this.lblFieldStat.Location = new System.Drawing.Point(545, 20);
+            this.lblFieldStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFieldStat.Location = new System.Drawing.Point(328, 0);
             this.lblFieldStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFieldStat.Name = "lblFieldStat";
-            this.lblFieldStat.Size = new System.Drawing.Size(94, 25);
+            this.lblFieldStat.Size = new System.Drawing.Size(149, 25);
             this.lblFieldStat.TabIndex = 24;
             this.lblFieldStat.Text = "0-0 (0%)";
+            this.lblFieldStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAssistStat
             // 
             this.lblAssistStat.AutoSize = true;
-            this.lblAssistStat.Location = new System.Drawing.Point(898, 40);
+            this.lblAssistStat.Location = new System.Drawing.Point(898, 68);
             this.lblAssistStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAssistStat.Name = "lblAssistStat";
             this.lblAssistStat.Size = new System.Drawing.Size(24, 25);
@@ -280,7 +303,7 @@
             // lblStealStat
             // 
             this.lblStealStat.AutoSize = true;
-            this.lblStealStat.Location = new System.Drawing.Point(1096, 46);
+            this.lblStealStat.Location = new System.Drawing.Point(1096, 68);
             this.lblStealStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblStealStat.Name = "lblStealStat";
             this.lblStealStat.Size = new System.Drawing.Size(24, 25);
@@ -290,7 +313,7 @@
             // lblTOStat
             // 
             this.lblTOStat.AutoSize = true;
-            this.lblTOStat.Location = new System.Drawing.Point(1655, 46);
+            this.lblTOStat.Location = new System.Drawing.Point(1655, 68);
             this.lblTOStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTOStat.Name = "lblTOStat";
             this.lblTOStat.Size = new System.Drawing.Size(24, 25);
@@ -300,7 +323,7 @@
             // lblReboundStat
             // 
             this.lblReboundStat.AutoSize = true;
-            this.lblReboundStat.Location = new System.Drawing.Point(1251, 40);
+            this.lblReboundStat.Location = new System.Drawing.Point(1251, 68);
             this.lblReboundStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblReboundStat.Name = "lblReboundStat";
             this.lblReboundStat.Size = new System.Drawing.Size(24, 25);
@@ -310,7 +333,7 @@
             // lblFoulAgainstStat
             // 
             this.lblFoulAgainstStat.AutoSize = true;
-            this.lblFoulAgainstStat.Location = new System.Drawing.Point(1853, 46);
+            this.lblFoulAgainstStat.Location = new System.Drawing.Point(1853, 68);
             this.lblFoulAgainstStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFoulAgainstStat.Name = "lblFoulAgainstStat";
             this.lblFoulAgainstStat.Size = new System.Drawing.Size(24, 25);
@@ -319,10 +342,10 @@
             // 
             // btnCommitFoul
             // 
-            this.btnCommitFoul.Location = new System.Drawing.Point(1787, 82);
+            this.btnCommitFoul.Location = new System.Drawing.Point(1787, 100);
             this.btnCommitFoul.Margin = new System.Windows.Forms.Padding(6);
             this.btnCommitFoul.Name = "btnCommitFoul";
-            this.btnCommitFoul.Size = new System.Drawing.Size(150, 44);
+            this.btnCommitFoul.Size = new System.Drawing.Size(193, 76);
             this.btnCommitFoul.TabIndex = 29;
             this.btnCommitFoul.Text = "Commit Foul";
             this.btnCommitFoul.UseVisualStyleBackColor = true;
@@ -331,17 +354,19 @@
             // lblFoulStat
             // 
             this.lblFoulStat.AutoSize = true;
-            this.lblFoulStat.Location = new System.Drawing.Point(214, 17);
+            this.lblFoulStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFoulStat.Location = new System.Drawing.Point(6, 0);
             this.lblFoulStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFoulStat.Name = "lblFoulStat";
-            this.lblFoulStat.Size = new System.Drawing.Size(94, 25);
+            this.lblFoulStat.Size = new System.Drawing.Size(149, 25);
             this.lblFoulStat.TabIndex = 31;
             this.lblFoulStat.Text = "0-0 (0%)";
+            this.lblFoulStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbCorrect
             // 
             this.cbCorrect.AutoSize = true;
-            this.cbCorrect.Location = new System.Drawing.Point(1612, 137);
+            this.cbCorrect.Location = new System.Drawing.Point(1858, 16);
             this.cbCorrect.Margin = new System.Windows.Forms.Padding(6);
             this.cbCorrect.Name = "cbCorrect";
             this.cbCorrect.Size = new System.Drawing.Size(143, 29);
@@ -352,10 +377,10 @@
             // 
             // btnBlock
             // 
-            this.btnBlock.Location = new System.Drawing.Point(1353, 82);
+            this.btnBlock.Location = new System.Drawing.Point(1353, 100);
             this.btnBlock.Margin = new System.Windows.Forms.Padding(6);
             this.btnBlock.Name = "btnBlock";
-            this.btnBlock.Size = new System.Drawing.Size(150, 44);
+            this.btnBlock.Size = new System.Drawing.Size(150, 76);
             this.btnBlock.TabIndex = 33;
             this.btnBlock.Text = "Block";
             this.btnBlock.UseVisualStyleBackColor = true;
@@ -364,7 +389,7 @@
             // lblBlockStat
             // 
             this.lblBlockStat.AutoSize = true;
-            this.lblBlockStat.Location = new System.Drawing.Point(1415, 51);
+            this.lblBlockStat.Location = new System.Drawing.Point(1415, 68);
             this.lblBlockStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblBlockStat.Name = "lblBlockStat";
             this.lblBlockStat.Size = new System.Drawing.Size(24, 25);
@@ -374,12 +399,43 @@
             // lbl3PtStat
             // 
             this.lbl3PtStat.AutoSize = true;
-            this.lbl3PtStat.Location = new System.Drawing.Point(698, 20);
+            this.lbl3PtStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl3PtStat.Location = new System.Drawing.Point(489, 0);
             this.lbl3PtStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl3PtStat.Name = "lbl3PtStat";
-            this.lbl3PtStat.Size = new System.Drawing.Size(94, 25);
+            this.lbl3PtStat.Size = new System.Drawing.Size(151, 25);
             this.lbl3PtStat.TabIndex = 35;
             this.lbl3PtStat.Text = "0-0 (0%)";
+            this.lbl3PtStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.lblFoulStat, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl3PtStat, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnFoulShotMade, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnFoulShotMiss, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblInsideStat, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnInsideMade, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnInsideMiss, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnFGMade, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblFieldStat, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn3Made, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnFGMiss, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn3Miss, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(183, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 191);
+            this.tableLayoutPanel1.TabIndex = 36;
             // 
             // PlayerStatPanel
             // 
@@ -387,39 +443,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.lbl3PtStat);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblBlockStat);
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.btnBlock);
             this.Controls.Add(this.cbCorrect);
-            this.Controls.Add(this.lblFoulStat);
             this.Controls.Add(this.lblFoulAgainstStat);
             this.Controls.Add(this.btnCommitFoul);
             this.Controls.Add(this.lblReboundStat);
             this.Controls.Add(this.lblTOStat);
             this.Controls.Add(this.lblStealStat);
             this.Controls.Add(this.lblAssistStat);
-            this.Controls.Add(this.lblFieldStat);
-            this.Controls.Add(this.lblInsideStat);
             this.Controls.Add(this.btnAssist);
             this.Controls.Add(this.btnCommitTurnOver);
             this.Controls.Add(this.lblDefense);
             this.Controls.Add(this.btnRebound);
             this.Controls.Add(this.btnSteals);
-            this.Controls.Add(this.btn3Miss);
-            this.Controls.Add(this.btn3Made);
-            this.Controls.Add(this.btnFGMiss);
-            this.Controls.Add(this.btnFGMade);
-            this.Controls.Add(this.btnInsideMiss);
-            this.Controls.Add(this.btnInsideMade);
-            this.Controls.Add(this.btnFoulShotMiss);
-            this.Controls.Add(this.btnFoulShotMade);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.lblName);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "PlayerStatPanel";
-            this.Size = new System.Drawing.Size(2022, 197);
+            this.Size = new System.Drawing.Size(2022, 203);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,5 +504,6 @@
         private System.Windows.Forms.Button btnBlock;
         private System.Windows.Forms.Label lblBlockStat;
         private System.Windows.Forms.Label lbl3PtStat;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

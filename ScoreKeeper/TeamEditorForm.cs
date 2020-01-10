@@ -28,9 +28,9 @@ namespace ScoreKeeper
             newPlayers.Clear();
 
             using (GamekeeperDB db = new GamekeeperDB()) {
-                TeamPlayer[] tx = (TeamPlayer[])db.TeamPlayers.Where(x => x.Team == team).ToArray();
+               
 
-                viewData = new BindingList<TeamPlayer>(tx);
+                viewData = new BindingList<TeamPlayer>(db.TeamPlayers.Where(x => x.Team == team).ToList());
                 dataGridView1.DataSource = viewData;
             }
             tbTeamName.Text = team.Name;
@@ -39,8 +39,8 @@ namespace ScoreKeeper
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            TeamPlayer tp = new TeamPlayer();
-            viewData.Add(tp);
+            TeamPlayer tp = viewData.AddNew();
+           // viewData.AddNew();
             newPlayers.Add(tp);
         }
 
@@ -68,6 +68,8 @@ namespace ScoreKeeper
                 foreach (TeamPlayer tp in viewData) {
                     tp.Team = myBoundTeam;
                 }
+
+                gDB.SaveChanges();
 
                 gDB.UpdateRange(viewData);
 
