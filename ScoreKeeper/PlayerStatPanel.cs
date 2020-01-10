@@ -28,7 +28,7 @@ namespace ScoreKeeper
             myStat = bindingContext;
             lblName.Text = bindingContext.Player.Name;
             lblNumber.Text = ""+ bindingContext.Player.Number;
-           
+
             t.Interval = 1000;
             t.Tick += T_Tick;
             ResetButtonColors();
@@ -52,7 +52,22 @@ namespace ScoreKeeper
             }
 
             btnBlock.BackColor = good;
-           
+            btn3Made.BackColor = good;
+            btnFGMade.BackColor = good;
+            btnInsideMade.BackColor = good;
+            btnAssist.BackColor = good;
+            btnBlock.BackColor = good;
+            btnRebound.BackColor = good;
+            btnFoulShotMade.BackColor = good;
+            btnSteals.BackColor = good;
+
+            btnCommitFoul.BackColor = bad;
+            btnCommitTurnOver.BackColor = bad;
+            btn3Miss.BackColor = bad;
+            btnFGMiss.BackColor = bad;
+            btnInsideMiss.BackColor = bad;
+            btnFoulShotMiss.BackColor = bad;
+
         }
 
         Timer t = new Timer();
@@ -175,6 +190,7 @@ namespace ScoreKeeper
             {
                 myStat.ThreeMade++;
             }
+            lbl3PtStat.Text = myStat.GetThreePtSummary();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -254,7 +270,7 @@ namespace ScoreKeeper
             {
                 myStat.CommittFoul++;
             }
-            lblFlStat.Text = myStat.CommittFoul + "";
+            lblFoulAgainstStat.Text = myStat.CommittFoul + "";
         }
 
         private void btnBlock_Click(object sender, EventArgs e)

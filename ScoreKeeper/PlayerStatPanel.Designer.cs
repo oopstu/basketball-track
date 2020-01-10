@@ -32,33 +32,32 @@
             this.lblNumber = new System.Windows.Forms.Label();
             this.btnIn = new System.Windows.Forms.Button();
             this.lblMin = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnFoulShotMade = new System.Windows.Forms.Button();
+            this.btnFoulShotMiss = new System.Windows.Forms.Button();
+            this.btnInsideMiss = new System.Windows.Forms.Button();
+            this.btnInsideMade = new System.Windows.Forms.Button();
+            this.btnFGMiss = new System.Windows.Forms.Button();
+            this.btnFGMade = new System.Windows.Forms.Button();
+            this.btn3Miss = new System.Windows.Forms.Button();
+            this.btn3Made = new System.Windows.Forms.Button();
+            this.lblDefense = new System.Windows.Forms.Label();
+            this.btnRebound = new System.Windows.Forms.Button();
+            this.btnSteals = new System.Windows.Forms.Button();
+            this.btnCommitTurnOver = new System.Windows.Forms.Button();
+            this.btnAssist = new System.Windows.Forms.Button();
             this.lblInsideStat = new System.Windows.Forms.Label();
             this.lblFieldStat = new System.Windows.Forms.Label();
             this.lblAssistStat = new System.Windows.Forms.Label();
             this.lblStealStat = new System.Windows.Forms.Label();
             this.lblTOStat = new System.Windows.Forms.Label();
             this.lblReboundStat = new System.Windows.Forms.Label();
-            this.lblFlStat = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
+            this.lblFoulAgainstStat = new System.Windows.Forms.Label();
+            this.btnCommitFoul = new System.Windows.Forms.Button();
             this.lblFoulStat = new System.Windows.Forms.Label();
             this.cbCorrect = new System.Windows.Forms.CheckBox();
             this.btnBlock = new System.Windows.Forms.Button();
+            this.lblBlockStat = new System.Windows.Forms.Label();
+            this.lbl3PtStat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblName
@@ -68,9 +67,9 @@
             this.lblName.Location = new System.Drawing.Point(90, 8);
             this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(100, 37);
+            this.lblName.Size = new System.Drawing.Size(74, 37);
             this.lblName.TabIndex = 0;
-            this.lblName.Text = "label1";
+            this.lblName.Text = "Billy";
             // 
             // lblNumber
             // 
@@ -79,9 +78,9 @@
             this.lblNumber.Location = new System.Drawing.Point(8, 8);
             this.lblNumber.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(100, 37);
+            this.lblNumber.Size = new System.Drawing.Size(53, 37);
             this.lblNumber.TabIndex = 1;
-            this.lblNumber.Text = "label1";
+            this.lblNumber.Text = "22";
             // 
             // btnIn
             // 
@@ -106,261 +105,238 @@
             this.lblMin.TabIndex = 4;
             this.lblMin.Text = "0:0";
             // 
-            // button1
+            // btnFoulShotMade
             // 
-            this.button1.Location = new System.Drawing.Point(192, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Foul Made";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.click_MadeFoul);
+            this.btnFoulShotMade.Location = new System.Drawing.Point(192, 46);
+            this.btnFoulShotMade.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFoulShotMade.Name = "btnFoulShotMade";
+            this.btnFoulShotMade.Size = new System.Drawing.Size(150, 60);
+            this.btnFoulShotMade.TabIndex = 5;
+            this.btnFoulShotMade.Text = "Foul Made";
+            this.btnFoulShotMade.UseVisualStyleBackColor = true;
+            this.btnFoulShotMade.Click += new System.EventHandler(this.click_MadeFoul);
             // 
-            // button2
+            // btnFoulShotMiss
             // 
-            this.button2.Location = new System.Drawing.Point(192, 115);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Missed";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnFoulShotMiss.Location = new System.Drawing.Point(192, 115);
+            this.btnFoulShotMiss.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFoulShotMiss.Name = "btnFoulShotMiss";
+            this.btnFoulShotMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnFoulShotMiss.TabIndex = 6;
+            this.btnFoulShotMiss.Text = "Missed";
+            this.btnFoulShotMiss.UseVisualStyleBackColor = true;
+            this.btnFoulShotMiss.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnInsideMiss
             // 
-            this.button3.Location = new System.Drawing.Point(354, 115);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Missed";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnInsideMiss.Location = new System.Drawing.Point(354, 115);
+            this.btnInsideMiss.Margin = new System.Windows.Forms.Padding(6);
+            this.btnInsideMiss.Name = "btnInsideMiss";
+            this.btnInsideMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnInsideMiss.TabIndex = 9;
+            this.btnInsideMiss.Text = "Missed";
+            this.btnInsideMiss.UseVisualStyleBackColor = true;
+            this.btnInsideMiss.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnInsideMade
             // 
-            this.button4.Location = new System.Drawing.Point(354, 46);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 60);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Made";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnInsideMade.Location = new System.Drawing.Point(354, 46);
+            this.btnInsideMade.Margin = new System.Windows.Forms.Padding(6);
+            this.btnInsideMade.Name = "btnInsideMade";
+            this.btnInsideMade.Size = new System.Drawing.Size(150, 60);
+            this.btnInsideMade.TabIndex = 8;
+            this.btnInsideMade.Text = "In Paint Made";
+            this.btnInsideMade.UseVisualStyleBackColor = true;
+            this.btnInsideMade.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label2
+            // btnFGMiss
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "inside";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.btnFGMiss.Location = new System.Drawing.Point(514, 115);
+            this.btnFGMiss.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFGMiss.Name = "btnFGMiss";
+            this.btnFGMiss.Size = new System.Drawing.Size(150, 50);
+            this.btnFGMiss.TabIndex = 12;
+            this.btnFGMiss.Text = "Missed";
+            this.btnFGMiss.UseVisualStyleBackColor = true;
+            this.btnFGMiss.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label3
+            // btnFGMade
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(516, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "field";
+            this.btnFGMade.Location = new System.Drawing.Point(514, 46);
+            this.btnFGMade.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFGMade.Name = "btnFGMade";
+            this.btnFGMade.Size = new System.Drawing.Size(150, 60);
+            this.btnFGMade.TabIndex = 11;
+            this.btnFGMade.Text = "FG Made";
+            this.btnFGMade.UseVisualStyleBackColor = true;
+            this.btnFGMade.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btn3Miss
             // 
-            this.button5.Location = new System.Drawing.Point(514, 115);
-            this.button5.Margin = new System.Windows.Forms.Padding(6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Missed";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btn3Miss.Location = new System.Drawing.Point(676, 115);
+            this.btn3Miss.Margin = new System.Windows.Forms.Padding(6);
+            this.btn3Miss.Name = "btn3Miss";
+            this.btn3Miss.Size = new System.Drawing.Size(150, 50);
+            this.btn3Miss.TabIndex = 15;
+            this.btn3Miss.Text = "Missed";
+            this.btn3Miss.UseVisualStyleBackColor = true;
+            this.btn3Miss.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btn3Made
             // 
-            this.button6.Location = new System.Drawing.Point(514, 46);
-            this.button6.Margin = new System.Windows.Forms.Padding(6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 60);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Made";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn3Made.Location = new System.Drawing.Point(676, 46);
+            this.btn3Made.Margin = new System.Windows.Forms.Padding(6);
+            this.btn3Made.Name = "btn3Made";
+            this.btn3Made.Size = new System.Drawing.Size(150, 60);
+            this.btn3Made.TabIndex = 14;
+            this.btn3Made.Text = "3pt Made";
+            this.btn3Made.UseVisualStyleBackColor = true;
+            this.btn3Made.Click += new System.EventHandler(this.button8_Click);
             // 
-            // label4
+            // lblDefense
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(708, 15);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 25);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "three";
+            this.lblDefense.AutoSize = true;
+            this.lblDefense.Location = new System.Drawing.Point(1084, 12);
+            this.lblDefense.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblDefense.Name = "lblDefense";
+            this.lblDefense.Size = new System.Drawing.Size(92, 25);
+            this.lblDefense.TabIndex = 19;
+            this.lblDefense.Text = "Defense";
             // 
-            // button7
+            // btnRebound
             // 
-            this.button7.Location = new System.Drawing.Point(676, 115);
-            this.button7.Margin = new System.Windows.Forms.Padding(6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 50);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Missed";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnRebound.Location = new System.Drawing.Point(1191, 82);
+            this.btnRebound.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRebound.Name = "btnRebound";
+            this.btnRebound.Size = new System.Drawing.Size(150, 44);
+            this.btnRebound.TabIndex = 18;
+            this.btnRebound.Text = "Rebound";
+            this.btnRebound.UseVisualStyleBackColor = true;
+            this.btnRebound.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // btnSteals
             // 
-            this.button8.Location = new System.Drawing.Point(676, 46);
-            this.button8.Margin = new System.Windows.Forms.Padding(6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 60);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "Made";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnSteals.Location = new System.Drawing.Point(1025, 82);
+            this.btnSteals.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSteals.Name = "btnSteals";
+            this.btnSteals.Size = new System.Drawing.Size(150, 44);
+            this.btnSteals.TabIndex = 17;
+            this.btnSteals.Text = "Steal";
+            this.btnSteals.UseVisualStyleBackColor = true;
+            this.btnSteals.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label5
+            // btnCommitTurnOver
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1084, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 25);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Defense";
+            this.btnCommitTurnOver.Location = new System.Drawing.Point(1553, 80);
+            this.btnCommitTurnOver.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCommitTurnOver.Name = "btnCommitTurnOver";
+            this.btnCommitTurnOver.Size = new System.Drawing.Size(222, 44);
+            this.btnCommitTurnOver.TabIndex = 20;
+            this.btnCommitTurnOver.Text = "Commit Turnover";
+            this.btnCommitTurnOver.UseVisualStyleBackColor = true;
+            this.btnCommitTurnOver.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button9
+            // btnAssist
             // 
-            this.button9.Location = new System.Drawing.Point(1448, 42);
-            this.button9.Margin = new System.Windows.Forms.Padding(6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 44);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "Rebound";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(1052, 42);
-            this.button10.Margin = new System.Windows.Forms.Padding(6);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(150, 44);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "Steal";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(1214, 42);
-            this.button11.Margin = new System.Windows.Forms.Padding(6);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(222, 44);
-            this.button11.TabIndex = 20;
-            this.button11.Text = "Commit Turnover";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(838, 71);
-            this.button12.Margin = new System.Windows.Forms.Padding(6);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(150, 44);
-            this.button12.TabIndex = 21;
-            this.button12.Text = "Assist";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click_1);
+            this.btnAssist.Location = new System.Drawing.Point(838, 71);
+            this.btnAssist.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAssist.Name = "btnAssist";
+            this.btnAssist.Size = new System.Drawing.Size(150, 44);
+            this.btnAssist.TabIndex = 21;
+            this.btnAssist.Text = "Assist";
+            this.btnAssist.UseVisualStyleBackColor = true;
+            this.btnAssist.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // lblInsideStat
             // 
             this.lblInsideStat.AutoSize = true;
-            this.lblInsideStat.Location = new System.Drawing.Point(434, 15);
+            this.lblInsideStat.Location = new System.Drawing.Point(378, 16);
             this.lblInsideStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblInsideStat.Name = "lblInsideStat";
-            this.lblInsideStat.Size = new System.Drawing.Size(0, 25);
+            this.lblInsideStat.Size = new System.Drawing.Size(94, 25);
             this.lblInsideStat.TabIndex = 23;
+            this.lblInsideStat.Text = "0-0 (0%)";
             // 
             // lblFieldStat
             // 
             this.lblFieldStat.AutoSize = true;
-            this.lblFieldStat.Location = new System.Drawing.Point(594, 15);
+            this.lblFieldStat.Location = new System.Drawing.Point(545, 20);
             this.lblFieldStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFieldStat.Name = "lblFieldStat";
-            this.lblFieldStat.Size = new System.Drawing.Size(0, 25);
+            this.lblFieldStat.Size = new System.Drawing.Size(94, 25);
             this.lblFieldStat.TabIndex = 24;
+            this.lblFieldStat.Text = "0-0 (0%)";
             // 
             // lblAssistStat
             // 
             this.lblAssistStat.AutoSize = true;
-            this.lblAssistStat.Location = new System.Drawing.Point(838, 46);
+            this.lblAssistStat.Location = new System.Drawing.Point(898, 40);
             this.lblAssistStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAssistStat.Name = "lblAssistStat";
-            this.lblAssistStat.Size = new System.Drawing.Size(0, 25);
+            this.lblAssistStat.Size = new System.Drawing.Size(24, 25);
             this.lblAssistStat.TabIndex = 25;
+            this.lblAssistStat.Text = "0";
             // 
             // lblStealStat
             // 
             this.lblStealStat.AutoSize = true;
-            this.lblStealStat.Location = new System.Drawing.Point(1084, 90);
+            this.lblStealStat.Location = new System.Drawing.Point(1096, 46);
             this.lblStealStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblStealStat.Name = "lblStealStat";
-            this.lblStealStat.Size = new System.Drawing.Size(0, 25);
+            this.lblStealStat.Size = new System.Drawing.Size(24, 25);
             this.lblStealStat.TabIndex = 26;
+            this.lblStealStat.Text = "0";
             // 
             // lblTOStat
             // 
             this.lblTOStat.AutoSize = true;
-            this.lblTOStat.Location = new System.Drawing.Point(1282, 90);
+            this.lblTOStat.Location = new System.Drawing.Point(1655, 46);
             this.lblTOStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTOStat.Name = "lblTOStat";
-            this.lblTOStat.Size = new System.Drawing.Size(0, 25);
+            this.lblTOStat.Size = new System.Drawing.Size(24, 25);
             this.lblTOStat.TabIndex = 27;
+            this.lblTOStat.Text = "0";
             // 
             // lblReboundStat
             // 
             this.lblReboundStat.AutoSize = true;
-            this.lblReboundStat.Location = new System.Drawing.Point(1478, 90);
+            this.lblReboundStat.Location = new System.Drawing.Point(1251, 40);
             this.lblReboundStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblReboundStat.Name = "lblReboundStat";
-            this.lblReboundStat.Size = new System.Drawing.Size(0, 25);
+            this.lblReboundStat.Size = new System.Drawing.Size(24, 25);
             this.lblReboundStat.TabIndex = 28;
+            this.lblReboundStat.Text = "0";
             // 
-            // lblFlStat
+            // lblFoulAgainstStat
             // 
-            this.lblFlStat.AutoSize = true;
-            this.lblFlStat.Location = new System.Drawing.Point(1642, 90);
-            this.lblFlStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblFlStat.Name = "lblFlStat";
-            this.lblFlStat.Size = new System.Drawing.Size(0, 25);
-            this.lblFlStat.TabIndex = 30;
+            this.lblFoulAgainstStat.AutoSize = true;
+            this.lblFoulAgainstStat.Location = new System.Drawing.Point(1853, 46);
+            this.lblFoulAgainstStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFoulAgainstStat.Name = "lblFoulAgainstStat";
+            this.lblFoulAgainstStat.Size = new System.Drawing.Size(24, 25);
+            this.lblFoulAgainstStat.TabIndex = 30;
+            this.lblFoulAgainstStat.Text = "0";
             // 
-            // button13
+            // btnCommitFoul
             // 
-            this.button13.Location = new System.Drawing.Point(1610, 42);
-            this.button13.Margin = new System.Windows.Forms.Padding(6);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(150, 44);
-            this.button13.TabIndex = 29;
-            this.button13.Text = "Commit Foul";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.btnCommitFoul.Location = new System.Drawing.Point(1787, 82);
+            this.btnCommitFoul.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCommitFoul.Name = "btnCommitFoul";
+            this.btnCommitFoul.Size = new System.Drawing.Size(150, 44);
+            this.btnCommitFoul.TabIndex = 29;
+            this.btnCommitFoul.Text = "Commit Foul";
+            this.btnCommitFoul.UseVisualStyleBackColor = true;
+            this.btnCommitFoul.Click += new System.EventHandler(this.button13_Click);
             // 
             // lblFoulStat
             // 
             this.lblFoulStat.AutoSize = true;
-            this.lblFoulStat.Location = new System.Drawing.Point(272, 15);
+            this.lblFoulStat.Location = new System.Drawing.Point(214, 17);
             this.lblFoulStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFoulStat.Name = "lblFoulStat";
-            this.lblFoulStat.Size = new System.Drawing.Size(0, 25);
+            this.lblFoulStat.Size = new System.Drawing.Size(94, 25);
             this.lblFoulStat.TabIndex = 31;
+            this.lblFoulStat.Text = "0-0 (0%)";
             // 
             // cbCorrect
             // 
@@ -376,7 +352,7 @@
             // 
             // btnBlock
             // 
-            this.btnBlock.Location = new System.Drawing.Point(1772, 42);
+            this.btnBlock.Location = new System.Drawing.Point(1353, 82);
             this.btnBlock.Margin = new System.Windows.Forms.Padding(6);
             this.btnBlock.Name = "btnBlock";
             this.btnBlock.Size = new System.Drawing.Size(150, 44);
@@ -385,40 +361,59 @@
             this.btnBlock.UseVisualStyleBackColor = true;
             this.btnBlock.Click += new System.EventHandler(this.btnBlock_Click);
             // 
+            // lblBlockStat
+            // 
+            this.lblBlockStat.AutoSize = true;
+            this.lblBlockStat.Location = new System.Drawing.Point(1415, 51);
+            this.lblBlockStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblBlockStat.Name = "lblBlockStat";
+            this.lblBlockStat.Size = new System.Drawing.Size(24, 25);
+            this.lblBlockStat.TabIndex = 34;
+            this.lblBlockStat.Text = "0";
+            // 
+            // lbl3PtStat
+            // 
+            this.lbl3PtStat.AutoSize = true;
+            this.lbl3PtStat.Location = new System.Drawing.Point(698, 20);
+            this.lbl3PtStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbl3PtStat.Name = "lbl3PtStat";
+            this.lbl3PtStat.Size = new System.Drawing.Size(94, 25);
+            this.lbl3PtStat.TabIndex = 35;
+            this.lbl3PtStat.Text = "0-0 (0%)";
+            // 
             // PlayerStatPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lbl3PtStat);
+            this.Controls.Add(this.lblBlockStat);
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.btnBlock);
             this.Controls.Add(this.cbCorrect);
             this.Controls.Add(this.lblFoulStat);
-            this.Controls.Add(this.lblFlStat);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.lblFoulAgainstStat);
+            this.Controls.Add(this.btnCommitFoul);
             this.Controls.Add(this.lblReboundStat);
             this.Controls.Add(this.lblTOStat);
             this.Controls.Add(this.lblStealStat);
             this.Controls.Add(this.lblAssistStat);
             this.Controls.Add(this.lblFieldStat);
             this.Controls.Add(this.lblInsideStat);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAssist);
+            this.Controls.Add(this.btnCommitTurnOver);
+            this.Controls.Add(this.lblDefense);
+            this.Controls.Add(this.btnRebound);
+            this.Controls.Add(this.btnSteals);
+            this.Controls.Add(this.btn3Miss);
+            this.Controls.Add(this.btn3Made);
+            this.Controls.Add(this.btnFGMiss);
+            this.Controls.Add(this.btnFGMade);
+            this.Controls.Add(this.btnInsideMiss);
+            this.Controls.Add(this.btnInsideMade);
+            this.Controls.Add(this.btnFoulShotMiss);
+            this.Controls.Add(this.btnFoulShotMade);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.lblName);
@@ -436,32 +431,31 @@
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Label lblMin;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnFoulShotMade;
+        private System.Windows.Forms.Button btnFoulShotMiss;
+        private System.Windows.Forms.Button btnInsideMiss;
+        private System.Windows.Forms.Button btnInsideMade;
+        private System.Windows.Forms.Button btnFGMiss;
+        private System.Windows.Forms.Button btnFGMade;
+        private System.Windows.Forms.Button btn3Miss;
+        private System.Windows.Forms.Button btn3Made;
+        private System.Windows.Forms.Label lblDefense;
+        private System.Windows.Forms.Button btnRebound;
+        private System.Windows.Forms.Button btnSteals;
+        private System.Windows.Forms.Button btnCommitTurnOver;
+        private System.Windows.Forms.Button btnAssist;
         private System.Windows.Forms.Label lblInsideStat;
         private System.Windows.Forms.Label lblFieldStat;
         private System.Windows.Forms.Label lblAssistStat;
         private System.Windows.Forms.Label lblStealStat;
         private System.Windows.Forms.Label lblTOStat;
         private System.Windows.Forms.Label lblReboundStat;
-        private System.Windows.Forms.Label lblFlStat;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label lblFoulAgainstStat;
+        private System.Windows.Forms.Button btnCommitFoul;
         private System.Windows.Forms.Label lblFoulStat;
         private System.Windows.Forms.CheckBox cbCorrect;
         private System.Windows.Forms.Button btnBlock;
+        private System.Windows.Forms.Label lblBlockStat;
+        private System.Windows.Forms.Label lbl3PtStat;
     }
 }

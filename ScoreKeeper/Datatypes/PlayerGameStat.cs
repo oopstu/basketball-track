@@ -108,5 +108,10 @@ namespace ScoreKeeper.Datatypes
         {
             return GetSummaryString(MadeFoulShots, MissedFoulShots);
         }
+
+        internal string GetThreePtSummary()
+        {
+            return GetSummaryString(ThreeMade, ThreeMissed);
+        }
     }
 }
