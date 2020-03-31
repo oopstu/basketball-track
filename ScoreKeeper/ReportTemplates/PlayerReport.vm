@@ -138,7 +138,7 @@
                   Foul Shots:<br/>
                </div>
                <div class="dttext dtvalues">
-                  0 (Coming Soon)<br/>
+                  ${PlayerStats.PlayedMinutes}<br/>
                   ${PlayerStats.GetInsideSummary()}<br/>
                   ${PlayerStats.GetFieldGoalSummary()}<br/>
                   ${PlayerStats.Assists}<br/>
@@ -170,7 +170,7 @@
                   Foul Shots:<br/>
                </div>
                <div class="dttext dtvalues">
-                  0 (Coming Soon)<br/>
+                  ${SeasonStats.PlayedMinutes}<br/>
                   ${SeasonStats.GetInsideSummary()}<br/>
                   ${SeasonStats.GetFieldGoalSummary()}<br/>
                   ${SeasonStats.Assists}<br/>
@@ -196,9 +196,10 @@
       </div>
       <div class="break">&nbsp;</div>
       <!-- End Player Stats -->
+	  <!-- Team This Game -->
       <div class="gamehead-cont">
          <div class="gamehead">
-            <div class="sectiontitle"><span>Team Data</span></div>
+            <div class="sectiontitle"><span>Team This Game Data</span></div>
             <div style="align: center;">
                <table class="teamdatatable">
                   <tr>
@@ -233,8 +234,47 @@
             </div>
          </div>
       </div>
-      <!-- Begin Team Stats -->
-      <!-- End Team Stats -->
+      <!-- End Team Game Stats -->
       <div class="break">&nbsp;</div>
+	  
+	  <!-- Begin Team Season Stats -->
+      
+	  <div class="gamehead-cont">
+         <div class="gamehead">
+            <div class="sectiontitle"><span>Team Season Data</span></div>
+            <div style="align: center;">
+               <table class="teamdatatable">
+                  <tr>
+                     <th>Player #</th>
+                     <th>Name</th>
+                     <th>Inside Shots</th>
+                     <th>Field Goals</th>
+                     <th>Foul Shots</th>
+                     <th>Rebounds</th>
+                     <th>Assists</th>
+                     <th>Blocks</th>
+                     <th>Steals</th>
+                     <th>Turn Overs</th>
+                     <th>Fouls</th>
+                  </tr>
+                  #foreach ($eachPlayer in $AllPlayersAllSeason)
+                  <tr>
+                     <td>${eachPlayer.Player.Number}</td>
+                     <td>${eachPlayer.Player.Name}</td>
+                     <td>${eachPlayer.GetInsideSummary()}</td>
+                     <td>${eachPlayer.GetFieldGoalSummary()}</td>
+                     <td>${eachPlayer.GetFoulSummary()}</td>
+                     <td>${eachPlayer.Rebounds}</td>
+                     <td>${eachPlayer.Assists}</td>
+                     <td>${eachPlayer.Blocks}</td>
+                     <td>${eachPlayer.Steals}</td>
+                     <td>${eachPlayer.CommittedTurnOvers}</td>
+                     <td>${eachPlayer.CommittFoul}</td>
+                  </tr>
+                  #end
+               </table>
+            </div>
+         </div>
+      </div>
    </body>
 </html>

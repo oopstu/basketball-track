@@ -54,6 +54,8 @@ namespace ScoreKeeper
                 gkDB.SaveChanges();
             }
 
+            flowLayoutPanel1.Controls.Clear();
+
             //XmlSerializer thing = new XmlSerializer(typeof(PlayerGameStat[]));
             //using (FileStream fs = new FileStream(@"c:\temp\game.xml" , FileMode.Create)) {
             //    thing.Serialize(fs, playerData);

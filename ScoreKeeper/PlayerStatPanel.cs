@@ -37,7 +37,8 @@ namespace ScoreKeeper
             lblName.Text = bindingContext.Player.Name;
             lblNumber.Text = ""+ bindingContext.Player.Number;
 
-            order = bindingContext.PlayerNumber;
+            order = bindingContext.Player.Number;
+            bindingContext.PlayerNumber = order;
 
             t.Interval = 1000;
             t.Tick += T_Tick;
@@ -231,8 +232,9 @@ namespace ScoreKeeper
             {
                 myStat.Steals++;
             }
-            lblStealStat.Text = "" + myStat.Steals;
+            btnSteals.Text = $"Steals {myStat.Steals}";
         }
+   
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -244,7 +246,7 @@ namespace ScoreKeeper
             {
                 myStat.Rebounds++;
             }
-            lblReboundStat.Text = "" + myStat.Rebounds;
+            btnRebound.Text = $"{myStat.Rebounds} Rebounds";
         }
 
       
@@ -259,7 +261,9 @@ namespace ScoreKeeper
             {
                 myStat.CommittedTurnOvers++;
             }
-            lblTOStat.Text = "" + myStat.CommittedTurnOvers;
+
+            btnCommitTurnOver.Text = $"{myStat.CommittedTurnOvers} Turnovers";
+            
         }
 
         private void button12_Click_1(object sender, EventArgs e)
@@ -272,7 +276,8 @@ namespace ScoreKeeper
             {
                 myStat.Assists++;
             }
-            lblAssistStat.Text = "" + myStat.Assists;
+            btnAssist.Text = $"Assists {myStat.Assists}";
+            
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -285,7 +290,7 @@ namespace ScoreKeeper
             {
                 myStat.CommittFoul++;
             }
-            lblFoulAgainstStat.Text = myStat.CommittFoul + "";
+            btnCommitFoul.Text = $"{myStat.CommittFoul} Fouls";
         }
 
         private void btnBlock_Click(object sender, EventArgs e)
@@ -298,7 +303,8 @@ namespace ScoreKeeper
             {
                 myStat.Blocks++;
             }
-            lblBlockStat.Text = "" + myStat.Blocks;
+
+            btnBlock.Text = $"Blocks: {myStat.Blocks}";
         }
 
         private void cbCorrect_CheckedChanged(object sender, EventArgs e)
@@ -309,6 +315,48 @@ namespace ScoreKeeper
         private void lblMin_Click(object sender, EventArgs e)
         {
             btnIn_Click(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cbCorrect.Checked)
+            {
+                myStat.ListenGeneral--;
+            }
+            else
+            {
+                myStat.ListenGeneral++;
+            }
+
+            button1.Text = $"Gen: {myStat.ListenGeneral}";
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (cbCorrect.Checked)
+            {
+                myStat.DefensivePressure--;
+            }
+            else
+            {
+                myStat.DefensivePressure++;
+            }
+
+            btnDefPress.Text = $"Defense: {myStat.DefensivePressure}";
+        }
+
+        private void btnSports_Click(object sender, EventArgs e)
+        {  if (cbCorrect.Checked)
+            {
+                myStat.Sportsmanship--;
+            }
+            else
+            {
+                myStat.Sportsmanship++;
+            }
+
+            btnSports.Text = $"Sportsman: {myStat.Sportsmanship}";
+        
         }
     }
 }

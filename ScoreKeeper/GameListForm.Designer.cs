@@ -30,24 +30,27 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGenReportForSelected = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 29);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(1681, 1000);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnGenReportForSelected
             // 
-            this.btnGenReportForSelected.Location = new System.Drawing.Point(478, 424);
+            this.btnGenReportForSelected.Location = new System.Drawing.Point(1036, 1043);
+            this.btnGenReportForSelected.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.btnGenReportForSelected.Name = "btnGenReportForSelected";
-            this.btnGenReportForSelected.Size = new System.Drawing.Size(156, 23);
+            this.btnGenReportForSelected.Size = new System.Drawing.Size(338, 56);
             this.btnGenReportForSelected.TabIndex = 1;
             this.btnGenReportForSelected.Text = "Generate Reports";
             this.btnGenReportForSelected.UseVisualStyleBackColor = true;
@@ -55,16 +58,16 @@
             // 
             // GameListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1733, 1107);
             this.Controls.Add(this.btnGenReportForSelected);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Name = "GameListForm";
             this.Text = "GameListForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -74,6 +74,15 @@ namespace ScoreKeeper.Datatypes
 
         [DataMember]
         public int PlayerNumber { get; set; }
+        
+        [DataMember]
+        public int DefensivePressure { get; set; }
+        
+        [DataMember]
+        public int Sportsmanship { get; set; }
+        
+        [DataMember]
+        public int ListenGeneral { get; set; }
 
         public PlayerGameStat()
         {
